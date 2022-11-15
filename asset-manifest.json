@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/foxtail/static/css/main.d2f9bb80.css",
+    "main.js": "/foxtail/static/js/main.09b5b45d.js",
+    "static/js/787.93a09f17.chunk.js": "/foxtail/static/js/787.93a09f17.chunk.js",
+    "index.html": "/foxtail/index.html",
+    "main.d2f9bb80.css.map": "/foxtail/static/css/main.d2f9bb80.css.map",
+    "main.09b5b45d.js.map": "/foxtail/static/js/main.09b5b45d.js.map",
+    "787.93a09f17.chunk.js.map": "/foxtail/static/js/787.93a09f17.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2f9bb80.css",
+    "static/js/main.09b5b45d.js"
+  ]
+}
