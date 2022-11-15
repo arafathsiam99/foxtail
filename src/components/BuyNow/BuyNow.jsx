@@ -2,7 +2,7 @@ import React from "react";
 
 const BuyNow = () => {
   return (
-    <div className="my-btn">
+    <div className="my-btn px-36 mx-5 md:px-5 md:mx-0">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

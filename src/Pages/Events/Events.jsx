@@ -1,13 +1,16 @@
 import React from "react";
 import SingleEvent from "../../components/SingleEvent/SingleEvent";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 const Events = () => {
   return (
     <>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between md:mx-6">
         <div className="flex py-8 px-8">
           <div>
-            <h3 className="text-xl text-purple-900">Filter:</h3>
+            <h3 className="text-lg tracking-wide leading-6 text-custom">
+              Filter:
+            </h3>
           </div>
           <div>
             <svg
@@ -26,9 +29,9 @@ const Events = () => {
             </svg>
           </div>
         </div>
-        <div className="flex items-center pr-2">
+        <div className="flex items-center md:mr-8 mr-5">
           <div>
-            <h3 className="text-xl">Short by</h3>
+            <h3 className="text-lg tracking-wide leading-6">Short by</h3>
           </div>
           <div className="flex justify-center">
             <div>
@@ -40,7 +43,7 @@ const Events = () => {
           border-2
           h-[40px] w-full
           text-black
-          rounded
+          rounded-sm
           flex
           items-center
         "
@@ -68,7 +71,7 @@ const Events = () => {
           </div>
         </div>
       </div>
-      <div className="border-2 py-3 my-3 mx-5 ">
+      {/* <div className="border-2 py-3 my-3 mx-5 ">
         <div className="flex items-center justify-between">
           <div className="flex">
             <h1>Loaction:</h1>
@@ -103,12 +106,18 @@ const Events = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="custom-color">
-        <h3 className="text-white text-2xl flex items-start ml-10 pt-4 ">
-          My Events
-        </h3>
-        <div className="grid md:grid-cols-2  mx-5  pt-3 pb-10 ">
+        <div className="flex items-center justify-between">
+          <h3 className="text-white font-medium text-base	md:text-xl tracking-wide	leading-6	md:leading-6 md:ml-14 ml-7 pt-4 ">
+            My Events
+          </h3>
+          <div className="flex mr-5 mt-3 md:hidden">
+            <FiArrowLeft className="text-white w-6 h-6" />
+            <FiArrowRight className="text-white w-6 h-6" />
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2  md:mx-5  md:pt-3 pb-10 ">
           <div className="flex justify-center items-center">
             <div>
               <svg
@@ -117,7 +126,7 @@ const Events = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="white"
-                className="w-6 h-6"
+                className="w-6 h-6 hidden md:block"
               >
                 <path
                   strokeLinecap="round"
@@ -130,7 +139,7 @@ const Events = () => {
               <SingleEvent />
             </div>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="md:flex justify-center items-center hidden ">
             <div>
               <SingleEvent />
             </div>
@@ -141,7 +150,7 @@ const Events = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="white"
-                className="w-6 h-6"
+                className="w-6 h-6 hidden md:block"
               >
                 <path
                   strokeLinecap="round"
@@ -153,8 +162,10 @@ const Events = () => {
           </div>
         </div>
       </div>
-      <h2>Upcoming Events</h2>
-      <div className="grid md:grid-cols-2  mx-5  pt-3 pb-10 ">
+      <h2 className="font-medium text-xl tracking-wide text-custom mt-5 ml-7 md:ml-14">
+        Upcoming Events
+      </h2>
+      <div className="grid md:grid-cols-2 md:mx-5 md:pt-3 pb-10 ">
         <SingleEvent />
         <SingleEvent />
         <SingleEvent />

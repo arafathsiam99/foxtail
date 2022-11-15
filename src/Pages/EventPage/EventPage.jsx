@@ -8,19 +8,19 @@ import SingleEvent from "../../components/SingleEvent/SingleEvent";
 const EventPage = () => {
   return (
     <>
-      <h3 className="flex items-center font-medium text-gray-400 py-4 ml-14 text-lg leading-6	 tracking-wide	">
+      <h3 className="flex items-center font-medium text-gray-400 py-4 ml-4 md:ml-14 text-base	 md:text-lg leading-6	 tracking-wide	">
         Events
         <span>
           <FiChevronRight />
         </span>
         Curabitur suscipit vestibulum urna id tincidunt
       </h3>
-      <div className="grid md:grid-cols-3 gap-5 mx-12">
-        <div className="relative col-span-2 mr-32">
+      <div className="grid md:grid-cols-3">
+        <div className="relative col-span-2 md:ml-14 md:mr-28 mx-4">
           <img
             src="https://i.ibb.co/r3tbMmR/image-2.png"
             alt=""
-            className="w-full h-full"
+            className="w-full h-full "
           />
           <div className="backdrop-blur-md justify-end absolute inset-x-0  flex bottom-0 h-[56px] w-full  text-white items-center ">
             <h3 className="font-medium	">Share</h3>
@@ -31,7 +31,7 @@ const EventPage = () => {
           </div>
         </div>
         <div>
-          <h1 className="font-medium text-3xl	leading-10	tracking-wide	">
+          <h1 className="m-3 md:m-0 font-medium text-2xl	 md:text-3xl md:leading-10	tracking-wide">
             Curabitur suscipit vestibulum urna id tincidunt
             <button className="bg-fuchsia-700 text-white font-medium text-lg rounded-3xl px-3 py-0.5 ml-5">
               Public
@@ -43,16 +43,16 @@ const EventPage = () => {
               NancyDyna
             </span>
           </p>
-          <div className="flex items-center text-lg	font-medium ">
+          <div className="flex items-center text-lg	font-medium my-2">
             <CiLocationOn />
             <p>18 Dynahost Street, 02 No Appartment, Texas, USA</p>
           </div>
-          <div className="flex items-center text-lg	font-medium mb-2">
+          <div className="flex items-center text-lg	font-medium my-2">
             <CiCalendar />
             <p>Date: 21.12.2022</p>
             <p className="ml-6">Time: 04.30pm</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center mt-5">
             <button className="bg-fuchsia-700 text-white rounded-3xl px-3 py-1 text-xl font-medium">
               Going(33)
             </button>
@@ -60,13 +60,13 @@ const EventPage = () => {
               Interested(41)
             </button>
           </div>
-          <div className="border-2 mt-5">
-            <h2 className="border-b-2 px-4 py-2 font-normal text-xl">
+          <div className="border-2 mt-7 mr-5">
+            <h2 className="border-b-2 px-4 py-4 font-normal text-xl">
               Seat Left: <span className="text-red-500"> Only 17</span>
             </h2>
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="px-4 py-3 font-medium text-xl">
+                <h2 className="px-4 py-4 font-medium text-xl">
                   Ticket Price: <span className="text-fuchsia-700">$64</span>
                 </h2>
               </div>
@@ -77,7 +77,7 @@ const EventPage = () => {
           </div>
         </div>
       </div>
-      <div className="grid md:grid-cols-3 py-5 gap-5 mx-12">
+      <div className="grid md:grid-cols-3 gap-3 py-5 ml-14 mr-12 ">
         <div className="border-2 px-3 col-span-2">
           <h1 className="text-lg font-medium py-2">Descriptions</h1>
           <p className="text-gray-400 text-lg">

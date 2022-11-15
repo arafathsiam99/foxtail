@@ -4,10 +4,10 @@ import SingleMember1 from "../../components/SingleMember/SingleMember1";
 const Member = () => {
   return (
     <>
-      <div className="flex items-center justify-between">
-        <div className="flex py-8 px-8">
+      <div className="flex items-center justify-between md:mx-8">
+        <div className="flex py-8 px-8 ">
           <div>
-            <h3 className="text-xl">Filter:</h3>
+            <h3 className="text-lg	tracking-wide">Filter:</h3>
           </div>
           <div>
             <svg
@@ -28,19 +28,20 @@ const Member = () => {
         </div>
         <div className="flex items-center pr-2">
           <div>
-            <h3 className="text-xl">Short by</h3>
+            <h3 className="text-lg	tracking-wide">Short by</h3>
           </div>
           <div className="flex justify-center">
             <div>
               <div className="dropdown relative ml-4">
                 <a
                   className="
-
-          px-6
+          py-2
+          px-3
+          md:px-6
           border-2
-          h-[40px] w-full
+         md:w-full
           text-black
-          rounded
+          rounded-sm
           flex
           items-center
         "
@@ -70,10 +71,10 @@ const Member = () => {
       </div>
 
       <div className="custom-color">
-        <h3 className="text-white text-3xl flex items-start ml-8 py-3">
+        <h3 className="text-white font-medium text-xl md:block  md:ml-10 hidden pt-5">
           Just for you
         </h3>
-        <div className="grid md:grid-cols-3 gap-8 mx-10  py-10 ">
+        <div className="grid md:grid-cols-3 gap-8 md:mx-10 mx-3  pt-5 pb-14">
           <SingleMember1 />
           <SingleMember1 />
           <SingleMember1 />
@@ -82,7 +83,7 @@ const Member = () => {
           <SingleMember1 />
         </div>
       </div>
-      <div className="grid md:grid-cols-3 gap-8 mx-10  py-10 ">
+      <div className="grid md:grid-cols-3 gap-8 md:mx-10 mx-3 py-10 ">
         <SingleMember1 />
         <SingleMember1 />
         <SingleMember1 />

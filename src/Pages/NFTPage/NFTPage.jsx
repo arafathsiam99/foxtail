@@ -1,12 +1,14 @@
 import React from "react";
 import BuyNow from "../../components/BuyNow/BuyNow";
 import SingleNft1 from "../../components/SingleNft/SingleNft1";
-import { FiChevronRight } from "react-icons/fi";
+import { FiChevronRight, FiEye, FiHeart } from "react-icons/fi";
 import {
   RiBookmarkLine,
   RiArrowUpSLine,
   RiArrowDownSLine,
+  RiArrowDropDownFill,
 } from "react-icons/ri";
+import { TbArrowsRightLeft, TbShoppingCartDiscount } from "react-icons/tb";
 
 const NFTPage = () => {
   return (
@@ -58,41 +60,10 @@ const NFTPage = () => {
           <p className="mt-2 	text-gray-500">
             Owned by: <span className="text-fuchsia-700 underline">Arifa</span>
           </p>
-          <div className="flex mt-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 text-gray-500"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-            </svg>
+          <div className="flex mt-3 items-center">
+            <FiEye className="w-6 h-6 text-gray-400" />
             <p className="ml-1 text-gray-500">9.67k View</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 ml-3 text-gray-500"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-              />
-            </svg>
+            <FiHeart className="w-6 h-6 text-gray-400 ml-3" />
             <p className="ml-1 	text-gray-500">02 Save</p>
           </div>
           <div className="bg-gray-200 my-10 p-3 font-normal">
@@ -125,13 +96,13 @@ const NFTPage = () => {
                 1052 <span className="text-sm text-gray-400">($654)</span>
               </h1>
             </div>
-            <div className=" flex items-center py-5 pl-3">
-              <BuyNow />
+            <div className=" md:flex items-center py-5 pl-3">
+              <BuyNow  />
               <div className="flex">
                 <div>
                   <button
                     type="button"
-                    className="text-custom font-medium leading-8	 border border-purple-800 focus:outline-none text-lg	 rounded-sm px-5 py-0.5 ml-4"
+                    className="px-36 mt-3 md:mt-0 text-custom font-medium leading-8	 border border-purple-800 focus:outline-none text-lg	 rounded-sm md:px-5 py-0.5 ml-4"
                   >
                     <div className="flex items-center">
                       <RiBookmarkLine className="text-custom " />
@@ -252,35 +223,50 @@ const NFTPage = () => {
           </div>
         </div>
       </div>
-      {/* <div className="py-3">
-        <div className="border-2 w-3/4">
+      <div className="py-3">
+        <div className="border-2 md:mx-16 mx-4">
           <div className="flex items-center justify-between p-3">
-            <h1 className="font-medium	text-lg	leading-6	tracking-wide	">
+            <h1 className="font-medium text-sm	md:text-lg	leading-6	tracking-wide	">
               Sales Activity
             </h1>
             <div className="flex items-center mr-3">
-              <h1 className="text-lg	leading-6	tracking-wide	text-gray-400">
+              <h1 className="text-sm md:text-lg	leading-6	tracking-wide	text-gray-400">
                 Filter Events
               </h1>
               <div className="flex border-2 p-2 items-center ml-4">
-                <h3>NFTs, Sale, Transfer</h3>
+                <h3 className="text-sm md:text-lg">NFTs, Sale, Transfer</h3>
                 <RiArrowDropDownFill className="w-8 h-8" />
               </div>
             </div>
           </div>
-          <table className="w-3/4">
-            <tr className="border-2 divide-x-2">
-              <th className="font-medium py-3">Event</th>
-              <th className="font-medium py-3">Price </th>
-              <th className="font-medium py-3">From</th>
-              <th className="font-medium py-3">Date</th>
+          <table className="md:w-[1350px] ml-3 mb-3">
+            <tr className="border-2 p-2 divide-x-2">
+              <td>
+                <h1 className="text-xl leading-7 tracking-wide text-center">
+                  Event
+                </h1>
+              </td>
+              <td>
+                <h1 className="text-xl leading-7 tracking-wide text-center">
+                  Price
+                </h1>
+              </td>
+              <td className="py-2 px-2">
+                <h1 className="text-xl leading-7 tracking-wide text-center">
+                  From
+                </h1>
+              </td>
+              <td className="py-2 px-2">
+                <h1 className="text-xl leading-7 tracking-wide text-center">
+                  Date
+                </h1>
+              </td>
             </tr>
-
             <tr className="border-2 p-2 divide-x-2">
               <td>
                 <div className="flex py-2 px-2">
                   <TbShoppingCartDiscount className="w-6 h-6" />
-                  <p className="ml-1 font-medium">Sale</p>
+                  <p className="ml-3.5 font-medium">Sale</p>
                 </div>
               </td>
               <td>
@@ -290,18 +276,18 @@ const NFTPage = () => {
                     alt=""
                     className="w-6 h-6"
                   />
-                  <p className="ml-1 font-medium">2.3469</p>
+                  <p className="ml-3.5 font-medium">2.3469</p>
                 </div>
               </td>
 
-              <td className="py-2 px-2">437097</td>
-              <td className="py-2 px-2">6 hours ago</td>
+              <td className="py-2 px-2 font-medium">437097</td>
+              <td className="py-2 px-2 font-medium">6 hours ago</td>
             </tr>
             <tr className="border-2 divide-x-2">
               <td>
                 <div className="flex py-2 px-2">
                   <TbArrowsRightLeft className="w-6 h-6" />
-                  <p className="ml-1 font-medium">Transfer</p>
+                  <p className="ml-3.5 font-medium">Transfer</p>
                 </div>
               </td>
               <td>
@@ -311,17 +297,17 @@ const NFTPage = () => {
                     alt=""
                     className="w-6 h-6"
                   />
-                  <p className="ml-1 font-medium">2.3469</p>
+                  <p className="ml-3.5 font-medium">2.3469</p>
                 </div>
               </td>
-              <td className="py-2 px-2">437097</td>
-              <td className="py-2 px-2">1 days ago</td>
+              <td className="py-2 px-2 font-medium">437097</td>
+              <td className="py-2 px-2 font-medium">1 days ago</td>
             </tr>
             <tr className="border-2 divide-x-2">
               <td>
                 <div className="flex py-2 px-2">
                   <TbArrowsRightLeft className="w-6 h-6" />
-                  <p className="ml-1 font-medium">Transfer</p>
+                  <p className="ml-3.5 font-medium">Transfer</p>
                 </div>
               </td>
               <td>
@@ -331,17 +317,19 @@ const NFTPage = () => {
                     alt=""
                     className="w-6 h-6"
                   />
-                  <p className="ml-1 font-medium">2.3469</p>
+                  <p className="ml-3.5 font-medium">2.3469</p>
                 </div>
               </td>
-              <td className="py-2 px-2">437097</td>
-              <td className="py-2 px-2">4 days ago</td>
+              <td className="py-2 px-2 font-medium">437097</td>
+              <td className="py-2 px-2 font-medium" font-medium>
+                4 days ago
+              </td>
             </tr>
             <tr className="border-2 divide-x-2">
               <td>
                 <div className="flex py-2 px-2">
                   <TbShoppingCartDiscount className="w-6 h-6" />
-                  <p className="ml-1 font-medium">Sale</p>
+                  <p className="ml-3.5 font-medium">Sale</p>
                 </div>
               </td>
               <td>
@@ -351,17 +339,17 @@ const NFTPage = () => {
                     alt=""
                     className="w-6 h-6"
                   />
-                  <p className="ml-1 font-medium">2.3469</p>
+                  <p className="ml-3.5 font-medium">2.3469</p>
                 </div>
               </td>
-              <td className="py-2 px-2">437097</td>
-              <td className="py-2 px-2">6 days ago</td>
+              <td className="py-2 px-2 font-medium">437097</td>
+              <td className="py-2 px-2 font-medium">6 days ago</td>
             </tr>
             <tr className="border-2 divide-x-2">
               <td>
                 <div className="flex py-2 px-2">
                   <TbArrowsRightLeft className="w-6 h-6" />
-                  <p className="ml-1 font-medium">Transfer</p>
+                  <p className="ml-3.5 font-medium">Transfer</p>
                 </div>
               </td>
               <td>
@@ -371,17 +359,17 @@ const NFTPage = () => {
                     alt=""
                     className="w-6 h-6"
                   />
-                  <p className="ml-1 font-medium">2.3469</p>
+                  <p className="ml-3.5 font-medium">2.3469</p>
                 </div>
               </td>
-              <td className="py-2 px-2">437097</td>
-              <td className="py-2 px-2">6 days ago</td>
+              <td className="py-2 px-2 font-medium">437097</td>
+              <td className="py-2 px-2 font-medium">6 days ago</td>
             </tr>
             <tr className="border-2 divide-x-2">
               <td>
                 <div className="flex py-2 px-2">
                   <TbShoppingCartDiscount className="w-6 h-6" />
-                  <p className="ml-1 font-medium">Sale</p>
+                  <p className="ml-3.5 font-medium">Sale</p>
                 </div>
               </td>
               <td>
@@ -391,18 +379,18 @@ const NFTPage = () => {
                     alt=""
                     className="w-6 h-6"
                   />
-                  <p className="ml-1 font-medium">2.3469</p>
+                  <p className="ml-3.5 font-medium">2.3469</p>
                 </div>
               </td>
-              <td className="py-2 px-2">437097</td>
-              <td className="py-2 px-2">9 days ago</td>
+              <td className="py-2 px-2 font-medium">437097</td>
+              <td className="py-2 px-2 font-medium">9 days ago</td>
             </tr>
 
             <tr className="border-2 divide-x-2">
               <td>
                 <div className="flex py-2 px-2">
                   <TbShoppingCartDiscount className="w-6 h-6" />
-                  <p className="ml-1 font-medium">Sale</p>
+                  <p className="ml-3.5 font-medium">Sale</p>
                 </div>
               </td>
               <td>
@@ -412,19 +400,19 @@ const NFTPage = () => {
                     alt=""
                     className="w-6 h-6"
                   />
-                  <p className="ml-1 font-medium">2.3469</p>
+                  <p className="ml-3.5 font-medium">2.3469</p>
                 </div>
               </td>
-              <td className="py-2 px-2">437097</td>
-              <td className="py-2 px-2">10 days ago</td>
+              <td className="py-2 px-2 font-medium">437097</td>
+              <td className="py-2 px-2 font-medium">10 days ago</td>
             </tr>
           </table>
         </div>
-      </div> */}
+      </div>
       <h3 class="font-medium my-3 md:ml-14 ml-5 text-xl text-custom">
         More NFTs from the creator
       </h3>
-      <div className="grid md:grid-cols-3 py-5 md:mx-10 ">
+      <div className="grid md:grid-cols-3 md:py-5 mb-16 md:mx-10 ">
         <SingleNft1 />
         <SingleNft1 />
         <SingleNft1 />

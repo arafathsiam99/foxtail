@@ -9,18 +9,18 @@ import SingleNft1 from "../../components/SingleNft/SingleNft1";
 const CreateNft = () => {
   return (
     <>
-      <div className="grid md:grid-cols-3 bg-color  py-4 pb-20">
+      <div className="grid md:grid-cols-3 bg-color  py-4 pb-44 bg-color">
         <div className="md:col-span-2">
           <form action="">
-            <h1 className="font-medium text-xl md:mx-40 leading-8 tracking-wide sm:ml-4">
+            <h1 className="font-medium text-xl md:mx-40 ml-4 leading-8 tracking-wide">
               Create Non-fungible token (NFT)
             </h1>
-            <div className="sm:mx-10 md:mx-40 py-2">
-              <h3 className=" text-lg mt-5 leading-7	tracking-wide">
+            <div className="mx-4 md:mx-40 py-2">
+              <h3 className=" font-normal text-lg mt-5 leading-7	tracking-wide">
                 Upload File
               </h3>
-              <div className="border-2 border-dashed  mt-2 py-20 ">
-                <button className="border-2 border-fuchsia-600 px-3 py-2 ml-52">
+              <div className="border-2 border-dashed bg-white mt-2 py-20 ">
+                <button className="border-2 ml-28 border-fuchsia-600 px-3 py-2 md:ml-52">
                   <div className="flex items-center">
                     <FiUpload className="text-fuchsia-600 ml-2" />
                     <h3 className="ml-1 text-lg font-medium text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-fuchsia-600">
@@ -28,16 +28,15 @@ const CreateNft = () => {
                     </h3>
                   </div>
                 </button>
-                <h3 className="mt-5 text-lg font-medium ml-48">
+                <h3 className="mt-5 text-lg font-medium ml-24 md:ml-48">
                   Or, Drag and drop file here
                 </h3>
-                <h3 className="mt-5 text-lg font-medium text-red-500 ml-44">
+                <h3 className="mt-5 text-lg ml-20 font-medium text-red-500 md:ml-44">
                   JPG, PNG, SVG, GIT. Max 10MB
                 </h3>
               </div>
-              <input type="text" />
             </div>
-            <div className=" mx-40 py-3">
+            <div className=" md:mx-40 mx-5 py-3">
               <label
                 for="Title"
                 className="block mb-2 text-lg font-medium leading-7	tracking-wide"
@@ -47,12 +46,12 @@ const CreateNft = () => {
               <input
                 type="text"
                 id="title"
-                className=" border-2 border-gray-300 text-gray-900 text-sm  block w-full p-2.5"
+                className=" border-2 border-gray-300 text-gray-900 text-sm  block w-full p-2.5 outline-none"
                 placeholder=""
                 required
               />
             </div>
-            <div className=" mx-40 py-3">
+            <div className=" md:mx-40 mx-5 py-3">
               <label
                 for="Title"
                 className="block mb-2 text-lg font-medium leading-7	tracking-wide"
@@ -62,13 +61,13 @@ const CreateNft = () => {
               <input
                 type="text"
                 id="description"
-                className=" border-2 border-gray-300 text-gray-900 text-sm  block w-full p-5"
+                className=" border-2 border-gray-300 text-gray-900 text-sm  block w-full p-5 outline-none"
                 placeholder=""
                 required
               />
             </div>
 
-            <div className="relative  mx-40 py-3">
+            <div className="relative  md:mx-40 mx-5 py-3">
               <label
                 for="tags"
                 className=" text-lg font-medium leading-7	tracking-wide"
@@ -83,7 +82,7 @@ const CreateNft = () => {
                 required=""
               />
             </div>
-            <div className="relative  mx-40 py-3">
+            <div className="relative  md:mx-40 mx-5 py-3">
               <label
                 for="perks"
                 className=" text-lg font-medium leading-7	tracking-wide"
@@ -98,7 +97,7 @@ const CreateNft = () => {
                 required=""
               />
             </div>
-            <div className="grid md:grid-cols-2 gap-5 mx-40">
+            <div className="grid md:grid-cols-2 md:gap-5  md:mx-40 mx-5">
               <div className="relative   py-3">
                 <div className="flex items-center justify-between">
                   <label
@@ -146,7 +145,7 @@ const CreateNft = () => {
                 />
               </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-5 mx-40">
+            <div className="grid md:grid-cols-2 md:gap-5 md:mx-40 mx-5">
               <div className="relative   py-3">
                 <label
                   for="duration"
@@ -194,7 +193,7 @@ const CreateNft = () => {
             Preview NFT
           </h1>
           <SingleNft1 />
-          <div className="border-2 p-3 mx-8 mt-6">
+          <div className="bg-white border-2 p-3 md:mx-5 mt-6">
             <div className="flex items-center ">
               <VscAdd className="font-color" />
               <h1 className="font-medium text-xl leading-6	tracking-wide font-color	ml-2">
